@@ -110,13 +110,13 @@ font {
 }
 
 .hp {
-	position: relative;
-	top: 10px;
-	left: -1px;
-	background: rgba(34, 26, 26, 0.6);
-	width: calc(100% - 8px);
-	border: rgba(60, 60, 60, 1) solid 2px;
-	height: 30px;
+    	position: relative;
+    	padding-top: 10px;
+    	left: -1px;
+    	background: rgba(34, 26, 26, 0.6);
+    	width: calc(100% - 8px);
+    	border: rgba(60, 60, 60, 1) solid 2px;
+    	height: 30px;
 }
 
 .hpbar {
