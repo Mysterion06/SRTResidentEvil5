@@ -34,24 +34,24 @@ function getData() {
 		});
 }
 
-function GetPlayerHP(data, playerName) {
+function GetPlayerHP(current, max, playerName) {
 	let mainContainer = document.getElementById("srtQueryData");
-	var hitPercent = (data.PlayerCurrentHealth / data.PlayerMaxHealth) * 100;
+	var hitPercent = (current / max) * 100;
 	if (hitPercent > 66) {
 		mainContainer.innerHTML += `<div class="hp"><div class="hpbar fine" style="width:${hitPercent}%">
-				<div id="currenthp">${playerName}${data.PlayerCurrentHealth} / ${data.PlayerMaxHealth}</div><div class="green" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
+				<div id="currenthp">${playerName}${current} / ${max}</div><div class="green" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
 	}
 	else if (hitPercent <= 66 && hitPercent > 33) {
 		mainContainer.innerHTML += `<div class="hp"><div class="hpbar caution" style="width:${hitPercent}%">
-				<div id="currenthp">${playerName}${data.PlayerCurrentHealth} / ${data.PlayerMaxHealth}</div><div class="yellow" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
+				<div id="currenthp">${playerName}${current} / ${max}</div><div class="yellow" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
 	}
 	else if (hitPercent <= 33 && hitPercent > 0){
 		mainContainer.innerHTML += `<div class="hp"><div class="hpbar danger" style="width:${hitPercent}%">
-				<div id="currenthp">${playerName}${data.PlayerCurrentHealth} / ${data.PlayerMaxHealth}</div><div class="red" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
+				<div id="currenthp">${playerName}${current} / ${max}</div><div class="red" id="percenthp">${hitPercent.toFixed(1)}%</div></div></div>`;
 	}
 	else {
 		mainContainer.innerHTML += `<div class="hp"><div class="hpbar dead" style="width:${100}%">
-				<div id="currenthp">${playerName}${data.PlayerCurrentHealth} / ${data.PlayerMaxHealth}</div><div class="grey" id="percenthp">${0}%</div></div></div>`;
+				<div id="currenthp">${playerName}${current} / ${max}</div><div class="grey" id="percenthp">${0}%</div></div></div>`;
 	}
 }
 
@@ -94,7 +94,8 @@ function appendData(data) {
 	//}
 
 	//PLAYERS HP
-	GetPlayerHP(data, "Chris: ");
+	GetPlayerHP(data.PlayerCurrentHealth, data.PlayerMaxHealth, "Chris: ");
+	GetPlayerHP(data.PlayerCurrentHealth2, data.PlayerMaxHealth2, "Sheva: ");
 	//var table = document.createElement("table");
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.IsAlive) });
 	//console.log("Filtered Enemies", filterdEnemies);
