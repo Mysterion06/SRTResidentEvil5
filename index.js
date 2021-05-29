@@ -96,6 +96,13 @@ function appendData(data) {
 	//PLAYERS HP
 	GetPlayerHP(data.PlayerCurrentHealth, data.PlayerMaxHealth, "Chris: ");
 	GetPlayerHP(data.PlayerCurrentHealth2, data.PlayerMaxHealth2, "Sheva: ");
+
+	//Money
+	mainContainer.innerHTML += `
+	<div id="da">
+		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
+	</div>`;
+
 	//var table = document.createElement("table");
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.IsAlive) });
 	//console.log("Filtered Enemies", filterdEnemies);
