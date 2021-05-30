@@ -101,6 +101,8 @@ function appendData(data) {
 	mainContainer.innerHTML += `
 	<div id="da">
 		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
+		<div class="title">Chris Kills: </div><font color="#00FF00">${data.ChrisKills}</font>
+		<div class="title">Sheva Kills: </div><font color="#00FF00">${data.ShevaKills}</font>
 	</div>`;
 
 	//var table = document.createElement("table");
