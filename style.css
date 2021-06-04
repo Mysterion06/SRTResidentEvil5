@@ -44,13 +44,14 @@ font {
 	justify-content: space-evenly;
 }
 
-#da {
+#Money {
 	position: relative;
 	top: 15px;
 	font-size: 20px;
 	display: flex;
 	justify-content: start;
 	padding-left: 10px;
+
 }
 
 #chapter {
@@ -70,9 +71,19 @@ font {
 	padding-left: 10px;
 }
 
-#lei {
+#DAChris {
 	position: relative;
 	top: 15px;
+	font-size: 20px;
+	display: flex;
+	justify-content: start;
+	padding-left: 10px;
+}
+
+#DASheva {
+	position: relative;
+	top: 15px;
+	font-size: 20px;
 	display: flex;
 	justify-content: start;
 	padding-left: 10px;
@@ -110,13 +121,13 @@ font {
 }
 
 .hp {
-    	position: relative;
-    	padding-top: 10px;
-    	left: -1px;
-    	background: rgba(34, 26, 26, 0.6);
-    	width: calc(100% - 8px);
-    	border: rgba(60, 60, 60, 1) solid 2px;
-    	height: 30px;
+    position: relative;
+    top: 10px;
+    left: -1px;
+    background: rgba(34, 26, 26, 0.6);
+    width: calc(100% - 8px);
+    border: rgba(60, 60, 60, 1) solid 2px;
+    height: 30px;
 }
 
 .hpbar {
