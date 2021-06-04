@@ -97,12 +97,26 @@ function appendData(data) {
 	GetPlayerHP(data.PlayerCurrentHealth, data.PlayerMaxHealth, "Chris: ");
 	GetPlayerHP(data.PlayerCurrentHealth2, data.PlayerMaxHealth2, "Sheva: ");
 
-	//Money
+	//Money, Killcount
 	mainContainer.innerHTML += `
-	<div id="da">
+	<div id="Money">
 		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
 		<div class="title">Chris Kills: </div><font color="#00FF00">${data.ChrisKills}</font>
 		<div class="title">Sheva Kills: </div><font color="#00FF00">${data.ShevaKills}</font>
+	</div>`;
+
+	//Chris DA
+	mainContainer.innerHTML += `
+	<div id="DAChris">
+		<div class="title">Chris DA: </div><font color="#00FF00">${data.ChrisDA}</font>
+		<div class="title">Rank: </div><font color="#00FF00">${data.ChrisDARank}</font>
+	</div>`;
+
+	//Sheva DA
+	mainContainer.innerHTML += `
+	<div id="DASheva">
+		<div class="title">Sheva DA: </div><font color="#00FF00">${data.ShevaDA}</font>
+		<div class="title">Rank: </div><font color="#00FF00">${data.ShevaDARank}</font>
 	</div>`;
 
 	//var table = document.createElement("table");
