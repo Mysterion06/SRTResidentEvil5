@@ -94,28 +94,28 @@ function appendData(data) {
 	//}
 
 	//PLAYERS HP
-	GetPlayerHP(data.PlayerCurrentHealth, data.PlayerMaxHealth, "Chris: ");
-	GetPlayerHP(data.PlayerCurrentHealth2, data.PlayerMaxHealth2, "Sheva: ");
+	GetPlayerHP(data.PlayerCurrentHealth, data.PlayerMaxHealth, "P1: ");
+	GetPlayerHP(data.PlayerCurrentHealth2, data.PlayerMaxHealth2, "P2: ");
 
 	//Money, Killcount
 	mainContainer.innerHTML += `
 	<div id="Money">
 		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
-		<div class="title">Player 1 Kills: </div><font color="#00FF00">${data.ChrisKills}</font>
-		<div class="title">Player 2 Kills: </div><font color="#00FF00">${data.ShevaKills}</font>
+		<div class="title">P1 Kills: </div><font color="#00FF00">${data.ChrisKills}</font>
+		<div class="title">P2 Kills: </div><font color="#00FF00">${data.ShevaKills}</font>
 	</div>`;
 
 	//Chris DA
 	mainContainer.innerHTML += `
 	<div id="DAChris">
-		<div class="title">Player 1 DA: </div><font color="#00FF00">${data.ChrisDA}</font>
+		<div class="title">P1 DA: </div><font color="#00FF00">${data.ChrisDA}</font>
 		<div class="title">Rank: </div><font color="#00FF00">${data.ChrisDARank}</font>
 	</div>`;
 
 	//Sheva DA
 	mainContainer.innerHTML += `
 	<div id="DASheva">
-		<div class="title">Player 2 DA: </div><font color="#00FF00">${data.ShevaDA}</font>
+		<div class="title">P2 DA: </div><font color="#00FF00">${data.ShevaDA}</font>
 		<div class="title">Rank: </div><font color="#00FF00">${data.ShevaDARank}</font>
 	</div>`;
 
