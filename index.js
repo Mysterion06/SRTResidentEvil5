@@ -108,14 +108,14 @@ function appendData(data) {
 	//Chris DA
 	mainContainer.innerHTML += `
 	<div id="DAChris">
-		<div class="title">Chris DA: </div><font color="#00FF00">${data.ChrisDA}</font>
+		<div class="title">Player 1 DA: </div><font color="#00FF00">${data.ChrisDA}</font>
 		<div class="title">Rank: </div><font color="#00FF00">${data.ChrisDARank}</font>
 	</div>`;
 
 	//Sheva DA
 	mainContainer.innerHTML += `
 	<div id="DASheva">
-		<div class="title">Sheva DA: </div><font color="#00FF00">${data.ShevaDA}</font>
+		<div class="title">Player 2 DA: </div><font color="#00FF00">${data.ShevaDA}</font>
 		<div class="title">Rank: </div><font color="#00FF00">${data.ShevaDARank}</font>
 	</div>`;
 
