@@ -348,4 +348,5 @@ function appendData(data) {
 	//Functions(data)
 	GetNeededKills(data);
 	GetSRank(data);
+	GetSRank2(data);
 }
