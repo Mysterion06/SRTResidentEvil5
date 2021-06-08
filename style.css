@@ -36,14 +36,6 @@ font {
 	width: 420px;
 }
 
-#position {
-	position: relative;
-	top: 8px;
-	font-size: 20px;
-	display: flex;
-	justify-content: space-evenly;
-}
-
 #Money {
 	position: relative;
 	top: 15px;
@@ -52,23 +44,6 @@ font {
 	justify-content: start;
 	padding-left: 10px;
 
-}
-
-#chapter {
-	position: relative;
-	top: 15px;
-	font-size: 20px;
-	display: flex;
-	justify-content: start;
-	padding-left: 10px;
-}
-
-#room {
-	position: relative;
-	top: 15px;
-	display: flex;
-	justify-content: start;
-	padding-left: 10px;
 }
 
 #DAChris {
