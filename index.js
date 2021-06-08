@@ -316,7 +316,7 @@ function appendData(data) {
 	<div id="Money">
 		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
 		<div class="title">P1 Kills: </div><font color="#00FF00">${data.ChrisKills} | ${GetNeededKills(data)} | ${GetSRank(data)}</font>
-		<div class="title">P1 Kills: </div><font color="#00FF00">${data.ShevaKills} | ${GetNeededKills(data)} | ${GetSRank2(data)}</font>
+		<div class="title">P2 Kills: </div><font color="#00FF00">${data.ShevaKills} | ${GetNeededKills(data)} | ${GetSRank2(data)}</font>
 	</div>`;
 
 	//Chris DA
