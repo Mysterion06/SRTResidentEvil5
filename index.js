@@ -4,6 +4,105 @@ const POLLING_RATE = 333;
 
 const JSON_ENDPOINT = `http://${JSON_ADDRESS}:${JSON_PORT}/`;
 
+var Chapters = [
+    {
+      Accuracy: 70,
+      Kills: 20,
+      Deaths: 0,
+      Time: 720
+    },
+    {
+      Accuracy: 70,
+      Kills: 15,
+      Deaths: 0,
+      Time: 780
+    },
+    {
+      Accuracy: 70,
+      Kills: 60,
+      Deaths: 0,
+      Time: 1380
+    },
+    {
+      Accuracy: 70,
+      Kills: 50,
+      Deaths: 0,
+      Time: 1320
+    },
+    {
+      Accuracy: 70,
+      Kills: 40,
+      Deaths: 0,
+      Time: 540
+    },
+    {
+      Accuracy: 70,
+      Kills: 30,
+      Deaths: 0,
+      Time: 1080
+    },
+    {
+      Accuracy: 70,
+      Kills: 50,
+      Deaths: 0,
+      Time: 1140
+    },
+    {
+      Accuracy: 70,
+      Kills: 30,
+      Deaths: 0,
+      Time: 1140
+    },
+    {
+      Accuracy: 70,
+      Kills: 50,
+      Deaths: 0,
+      Time: 1380
+    },
+    {
+      Accuracy: 70,
+      Kills: 35,
+      Deaths: 0,
+      Time: 960
+    },
+    {
+      Accuracy: 70,
+      Kills: 7,
+      Deaths: 0,
+      Time: 720
+    },
+    {
+      Accuracy: 70,
+      Kills: 40,
+      Deaths: 0,
+      Time: 1320
+    },
+    {
+      Accuracy: 70,
+      Kills: 30,
+      Deaths: 0,
+      Time: 2280
+    },
+    {
+      Accuracy: 70,
+      Kills: 40,
+      Deaths: 0,
+      Time: 1560
+    },
+    {
+      Accuracy: 70,
+      Kills: 35,
+      Deaths: 0,
+      Time: 1380
+    },
+    {
+      Accuracy: 70,
+      Kills: 25,
+      Deaths: 0,
+      Time: 1320
+    }
+];
+
 window.onload = function () {
 	getData();
 	setInterval(getData, POLLING_RATE);
@@ -20,6 +119,8 @@ var Desc = function (a, b) {
 	if (a < b) return +1;
 	return 0;
 };
+
+
 
 function getData() {
 	fetch(JSON_ENDPOINT)
@@ -94,211 +195,13 @@ function GetNeededKills(data){
 	}
 }
 
-function GetSRank(data){
-	var accuracy = data.EnemiesHit / data.ShotsFired * 100;
-	switch(data.Chapter){
-		case 0: // Chapter 1-1
-			if(accuracy >= 70 && data.ChrisKills >= 20 && data.Deaths == 0 && data.IGT <= 720){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 1:
-			if(accuracy >= 70 && data.ChrisKills >= 15 && data.Deaths == 0 && data.IGT <= 780){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 2: // Chapter 2-1
-			if(accuracy >= 70 && data.ChrisKills >= 60 && data.Deaths == 0 && data.IGT <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 3:
-			if(accuracy >= 70 && data.ChrisKills >= 50 && data.Deaths == 0 && data.IGT <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 4:
-			if(accuracy >= 70 && data.ChrisKills >= 40 && data.Deaths == 0 && data.IGT <= 540){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 5: // Chapter 3-1
-			if(accuracy >= 70 && data.ChrisKills >= 30 && data.Deaths == 0 && data.IGT <= 1080){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 6:
-			if(accuracy >= 70 && data.ChrisKills >= 50 && data.Deaths == 0 && data.IGT <= 1140){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 7:
-			if(accuracy >= 70 && data.ChrisKills >= 30 && data.Deaths == 0 && data.IGT <= 1140){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 8: // Chatper 4-1
-			if(accuracy >= 70 && data.ChrisKills >= 50 && data.Deaths == 0 && data.IGT <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 9:
-			if(accuracy >= 70 && data.ChrisKills >= 35 && data.Deaths == 0 && data.IGT <= 960){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 10: // Chapter 5-1
-			if(accuracy >= 70 && data.ChrisKills >= 7 && data.Deaths == 0 && data.IGT <= 720){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 11:
-			if(accuracy >= 70 && data.ChrisKills >= 40 && data.Deaths == 0 && data.IGT <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 12:
-			if(accuracy >= 70 && data.ChrisKills >= 30 && data.Deaths == 0 && data.IGT <= 2280){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 13: // Chapter  6-1
-			if(accuracy >= 70 && data.ChrisKills >= 40 && data.Deaths == 0 && data.IGT <= 1560){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 14:
-			if(accuracy >= 70 && data.ChrisKills >= 35 && data.Deaths == 0 && data.IGT <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 15:
-			if(accuracy >= 70 && data.ChrisKills >= 25 && data.Deaths == 0 && data.IGT <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		default:
-			return "Not in a Chapter";
+function GetSRank(chapter, enemiesHit, shotsFired, kills, deaths, time){
+	var accuracy = enemiesHit / shotsFired * 100;
+	if (accuracy >= Chapters[chapter].Accuracy && kills >= Chapters[chapter].Kills && deaths == Chapters[chapter].Deaths && time <= Chapters[chapter].Time) {
+		return "S";
 	}
-}
-
-function GetSRank2(data){
-	var accuracy = data.EnemiesHit2 / data.ShotsFired2 * 100;
-	switch(data.Chapter){
-		case 0: // Chapter 1-1
-			if(accuracy >= 70 && data.ShevaKills >= 20 && data.Deaths2 == 0 && data.IGT2 <= 720){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 1:
-			if(accuracy >= 70 && data.ShevaKills >= 15 && data.Deaths2 == 0 && data.IGT2 <= 780){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 2: // Chapter 2-1
-			if(accuracy >= 70 && data.ShevaKills >= 60 && data.Deaths2 == 0 && data.IGT2 <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 3:
-			if(accuracy >= 70 && data.ShevaKills >= 50 && data.Deaths2 == 0 && data.IGT2 <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 4:
-			if(accuracy >= 70 && data.ShevaKills >= 40 && data.Deaths2 == 0 && data.IGT2 <= 540){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 5: // Chapter 3-1
-			if(accuracy >= 70 && data.ShevaKills >= 30 && data.Deaths2 == 0 && data.IGT2 <= 1080){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 6:
-			if(accuracy >= 70 && data.ShevaKills >= 50 && data.Deaths2 == 0 && data.IGT2 <= 1140){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 7:
-			if(accuracy >= 70 && data.ShevaKills >= 30 && data.Deaths2 == 0 && data.IGT2 <= 1140){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 8: // Chatper 4-1
-			if(accuracy >= 70 && data.ShevaKills >= 50 && data.Deaths2 == 0 && data.IGT2 <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 9:
-			if(accuracy >= 70 && data.ShevaKills >= 35 && data.Deaths2 == 0 && data.IGT2 <= 960){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 10: // Chapter 5-1
-			if(accuracy >= 70 && data.ShevaKills >= 7 && data.Deaths2 == 0 && data.IGT2 <= 720){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 11:
-			if(accuracy >= 70 && data.ShevaKills >= 40 && data.Deaths2 == 0 && data.IGT2 <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 12:
-			if(accuracy >= 70 && data.ShevaKills >= 30 && data.Deaths2 == 0 && data.IGT2 <= 2280){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 13: // Chapter  6-1
-			if(accuracy >= 70 && data.ShevaKills >= 40 && data.Deaths2 == 0 && data.IGT2 <= 1560){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 14:
-			if(accuracy >= 70 && data.ShevaKills >= 35 && data.Deaths2 == 0 && data.IGT2 <= 1380){
-				return "S";
-			} else{
-				return "No S";
-			}
-		case 15:
-			if(accuracy >= 70 && data.ShevaKills >= 25 && data.Deaths2 == 0 && data.IGT2 <= 1320){
-				return "S";
-			} else{
-				return "No S";
-			}
-		default:
-			return "Not in a Chapter";
+	else {
+		return "No S";
 	}
 }
 
@@ -315,8 +218,8 @@ function appendData(data) {
 	mainContainer.innerHTML += `
 	<div id="Money">
 		<div class="title">Naira: </div><font color="#00FF00">${"₦ " + data.Money}</font>
-		<div class="title">P1 Kills: </div><font color="#00FF00">${data.ChrisKills} | ${GetNeededKills(data)} | ${GetSRank(data)}</font>
-		<div class="title">P2 Kills: </div><font color="#00FF00">${data.ShevaKills} | ${GetNeededKills(data)} | ${GetSRank2(data)}</font>
+		<div class="title">P1 Kills: </div><font color="#00FF00">${data.ChrisKills} | ${GetNeededKills(data)} | ${GetSRank(data.Chapter, data.EnemiesHits, data.ShotsFired, data.Deaths, data.IGT, data.ChrisKills)}</font>
+		<div class="title">P2 Kills: </div><font color="#00FF00">${data.ShevaKills} | ${GetNeededKills(data)} | ${GetSRank(data.Chapter, data.EnemiesHits2, data.ShotsFired2, data.Deaths, data.IGT2, data.ShevaKills)}</font>
 	</div>`;
 
 	//Chris DA
@@ -335,6 +238,7 @@ function appendData(data) {
 
 	//var table = document.createElement("table");
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.IsAlive) });
+	
 	//console.log("Filtered Enemies", filterdEnemies);
 	filterdEnemies.sort(function (a, b) {
 		return Asc(a.Percentage, b.Percentage) || Desc(a.CurrentHP, b.CurrentHP);
@@ -348,5 +252,4 @@ function appendData(data) {
 	//Functions(data)
 	GetNeededKills(data);
 	GetSRank(data);
-	GetSRank2(data);
 }
