@@ -236,6 +236,18 @@ function appendData(data) {
 		<div class="title">Rank: </div><font color="#00FF00">${data.ShevaDARank}</font>
 	</div>`;
 
+	//SRTVersion
+	mainContainer.innerHTML += `
+	<div id="SRTVersion">
+		<div class="title">TV: </div><font color="#00FF00">${data.VersionInfo}</font>
+	</div>`;
+
+	//GameVersion
+	mainContainer.innerHTML += `
+	<div id="GameVersion">
+		<div class="title">GV: </div><font color="#00FF00">${data.GameInfo}</font>
+	</div>`; 
+
 	//var table = document.createElement("table");
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.IsAlive) });
 	
