@@ -64,35 +64,31 @@ font {
 	padding-left: 10px;
 }
 
-#gs {
-	position: relative;
-	top: 15px;
-	display: flex;
-	justify-content: start;
-	padding-left: 10px;
-}
-
-#cs {
+#SRTVersion {
 	position: absolute;
-	top: 165px;
-	left: 10px;
-	padding-left: 10px;
+	align-items: center;
+	right: 0px;
+	bottom: 14px;
+	font-size: 20px;
+	display: flex;
 }
 
-#cs2 {
+.SRTInfoWidth {
 	position: relative;
-	top: 15px;
-	display: flex;
-	justify-content: start;
-	padding-left: 10px;
+	width: calc(100%);
 }
 
-#ps {
-	position: relative;
-	top: 15px;
+#GameVersion {
+	position: absolute;
+	right: 18px;
+	bottom: -15px;
+	font-size: 20px;
 	display: flex;
-	justify-content: start;
-	padding-left: 10px;
+}
+
+.GameInfoWidth {
+	position: relative;
+	width: calc(100%);
 }
 
 .hp {
