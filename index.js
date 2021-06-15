@@ -237,16 +237,10 @@ function appendData(data) {
 	</div>`;
 
 	//SRTVersion
-	mainContainer.innerHTML += `
 	<div id="SRTVersion">
-		<div class="title">TV: </div><font color="#00FF00">${data.VersionInfo}</font>
+		<div class="title"></div><font color="#FFFFFF">${"TV: " + data.VersionInfo}</font>
+		<div class="title"></div><font color="#FFFFFF">${"GV: " + data.GameInfo}</font>
 	</div>`;
-
-	//GameVersion
-	mainContainer.innerHTML += `
-	<div id="GameVersion">
-		<div class="title">GV: </div><font color="#00FF00">${data.GameInfo}</font>
-	</div>`; 
 
 	//var table = document.createElement("table");
 	var filterdEnemies = data.EnemyHealth.filter(m => { return (m.IsAlive) });
