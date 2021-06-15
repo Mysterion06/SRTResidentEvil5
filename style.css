@@ -68,25 +68,12 @@ font {
 	position: absolute;
 	align-items: center;
 	right: 0px;
-	bottom: 14px;
+	bottom: -15px;
 	font-size: 20px;
-	display: flex;
+	display: flexbox;
 }
 
 .SRTInfoWidth {
-	position: relative;
-	width: calc(100%);
-}
-
-#GameVersion {
-	position: absolute;
-	right: 18px;
-	bottom: -15px;
-	font-size: 20px;
-	display: flex;
-}
-
-.GameInfoWidth {
 	position: relative;
 	width: calc(100%);
 }
