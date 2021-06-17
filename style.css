@@ -68,7 +68,7 @@ font {
 	position: absolute;
 	align-items: center;
 	right: 0px;
-	bottom: -15px;
+	top: 112px;
 	font-size: 20px;
 	display: flexbox;
 }
