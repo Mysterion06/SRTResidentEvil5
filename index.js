@@ -237,6 +237,7 @@ function appendData(data) {
 	</div>`;
 
 	//SRTVersion
+	mainContainer.innerHTML += `
 	<div id="SRTVersion">
 		<div class="title"></div><font color="#FFFFFF">${"TV: " + data.VersionInfo}</font>
 		<div class="title"></div><font color="#FFFFFF">${"GV: " + data.GameInfo}</font>
